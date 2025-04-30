@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div>
+            <h1>Cadastro de Clientes</h1>
+        </div>
+    </header>
+
+    <!-- Conteudo -->
+    <main>
+        <p style="color: red; text-align: center;">Todos os campos são de preenchimentos obrigatórios.</p>
+        <fieldset id="dadosPessoais">
+            <form>
+                <section>
+                    <fieldset>
+                        <legend>Dados Pessoais</legend><br>
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+    
+                        <label for="dtNasc">Data de Nascimento:</label><br>
+                        <input type="date" id="dtNasc" name="dtNasc" required><br><br>
+    
+                        <label for="sexo">Sexo:</label><br>
+                        <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo" value="feminino">
+                        <label for="feminino">Feminino</label>
+                    </fieldset>
+                </section>
+                <br>
+
+                <section>
+                    <fieldset>
+                        <legend>Informações de Contato</legend>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+    
+                        <label for="telefone">Telefone:</label><br>
+                        <input type="tel" id="telefone" name="telefone" maxlength="9" placeholder="Apenas números. (máx 9)." required><br><br>
+    
+                        <label for="site">Site:</label><br>
+                        <input type="url" id="site" name="site" placeholder="https://www.exemplo.com">
+                    </fieldset>
+                </section>
+                <br>
+
+                <section>
+                    <fieldset>
+                        <legend>Localização</legend>
+                        <label for="endereco">Endereço:</label><br>
+                        <input type="text" id="endereco" name="endereco" required><br><br>
+    
+                        <label for="numero">Número:</label><br>
+                        <input type="text"  id="numero" name="numero" placeholder="Valor entre 1 á 9999"><br><br>
+    
+                        <label for="cidade">Cidade:</label><br>
+                        <input type="text" id="cidade" name="cidade" required><br><br>
+    
+                        <label for="estado">Estado:</label><br>
+                        <select style="width: 30%; padding: 5px; margin-top: 4px; box-sizing: border-box;" id="estado" name="estado" required>
+                            <option value="">...</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="pr">Paraná</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="ba">Bahia</option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pi">Piauí</option>
+                            <option value="al">Alagoas</option>
+                            <option value="se">Sergipe</option>
+                            <option value="to">Tocantins</option>
+                            <option value="ap">Amapá</option>
+                            <option value="pa">Pará</option>
+                            <option value="am">Amazonas</option>
+                            <option value="rr">Roraima</option>
+                            <option value="ac">Acre</option>
+                            <option value="ro">Rondônia</option>
+                        </select>
+                    </fieldset>
+                </section>
+
+            </form>
+        </fieldset>
+        <br><br>
+        <!-- Botões fora do fieldset -->
+        <p style="text-align: center; margin-right: 30%;">
+            <input type="button" value="Cadastrar" />
+            <input type="button" value="Limpar" />
+        </p>
+
+    </main>
+
+    <!--rodape-->
+    <footer style="text-align: center;">
+        <p>&copy; PRC Systems. 2025 - by Vanessa Pains</p>
+    </footer>
+</body>
+
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .obrigatorio {
+        color: red;
+        font-size: 14px;
+    }
+
+    fieldset[id="dadosPessoais"] {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    fieldset {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    legend {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="email"]{
+        width: 100%;
+        padding: 5px;
+        margin-top: 4px;
+        box-sizing: border-box;
+    }
+
+    input[id="numero"],
+    input[type="tel"],
+    input[id="dtNasc"] {
+        width: 30%;
+        padding: 5px;
+        margin-top: 4px;
+        box-sizing: border-box;
+    }
+
+    .input-number {
+        width: 50%;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    footer {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    input[type="button"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+</html>
