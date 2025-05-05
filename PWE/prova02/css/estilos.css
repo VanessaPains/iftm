@@ -1,1 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(44, 44, 44);
+    font-family:  "Noto Sans Display", sans-serif;
+}
+
+section table td {
+    padding: 20px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+    background-color: black;
+}
+
+header h1 {
+    background-color: rgb(0, 102, 127);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.5s;
+}
+
+header h1:hover {
+    letter-spacing: 5px;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+header a:link,
+header a:visited {
+    text-decoration: none;
+    padding: 10px;
+    padding-top: 45px;
+    display: inline-block;
+    color: white;
+    transition: all 0.3s;
+}
+
+header ul li {
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    border-bottom: 3px solid black;
+}
+
+header ul li:nth-child(1) {
+    background-image: url('../imagens/faceBlack.png');
+}
+
+header ul li:nth-child(1):hover {
+    background-image: url('../imagens/face.png');
+    border-bottom: 3px solid rgb(100, 157, 176);
+    color: rgb(100, 157, 176);
+}
+
+header ul li:nth-child(2) {
+    background-image: url('../imagens/instaBlack.png');
+}
+
+header ul li:nth-child(2):hover {
+    background-image: url('../imagens/insta.png');
+    border-bottom: 3px solid rgb(186, 9, 186);
+    color: rgb(186, 9, 186);
+}
+
+header ul li:nth-child(3) {
+    background-image: url('../imagens/mapsBlack.png');
+}
+
+header ul li:nth-child(3):hover {
+    background-image: url('../imagens/maps.png');
+    border-bottom: 3px solid green;
+    color: green;
+}
+
+header ul li:nth-child(4) {
+    background-image: url('../imagens/twitterBlack.png');
+}
+
+header ul li:nth-child(4):hover {
+    background-image: url('../imagens/twitter.png');
+    border-bottom: 3px solid yellow;
+    color: yellow;
+}
+
+header ul li:nth-child(5) {
+    background-image: url('../imagens/youtubeBlack.png');
+}
+
+header ul li:nth-child(5):hover {
+    background-image: url('../imagens/youtube.png');
+    border-bottom: 3px solid red;
+    color: red;
+}
+
+header p {
+    font-size: 20px;
+    margin: 30px;
+}
+header nav {
+    font-weight: bold;
+}
+main section {
+    background-color:white;
+    width:1000px;
+    margin:auto;
+    padding: 30px;
+    text-align:justify;
+}
+main section:nth-of-type(2) {
+    text-align: center;
+    background-color: rgb(100, 100, 100);
+}
+main section:nth-child(2) {
+    margin-top: 10px;
+}
+main section:nth-child(2) td {
+    text-align:center;
+}
+main section:nth-child(2) tr:nth-child(2) h2, main section:nth-child(2) tr:nth-child(2) h3{
+    transition: all 0.5s;
+}
+main section:nth-child(2) tr:nth-child(2) h2:hover {
+    letter-spacing: 4px;
+    color: red;
+}
+main section:nth-child(2) tr:nth-child(2) h3:hover {
+    transform: rotate(360deg);
+    color:blue;
+}
+main section:nth-child(2) tr:nth-child(3) p{
+    text-align: justify;
+    padding-left:15px;
+    padding-right:15px;
+}
+main section:nth-child(3), main section:nth-child(4), main section:nth-child(5) {
+    margin-top: 10px;
+}
+main section:nth-child(3) img, main section:nth-child(4) img, main section:nth-child(5) img {
+    float: left;
+    padding-right: 40px;
+}
+main section:nth-child(3) p, main section:nth-child(4) p, main section:nth-child(5) p{
+    margin-top: 30px;
+}
+footer {
+    background-color: rgb(214, 94, 14);
+    width:1000px;
+    margin:auto;
+    margin-top: 10px;
+    padding:30px;
+}
+footer p {
+    text-align: center;
+    color:white;
+    margin-top:20px;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+}
+footer form {
+    width: 300px;
+    margin:auto;
+    color:white;
+    border:1px solid white;
+    padding:20px;
+    text-shadow: 1px 1px 1px black;
+}
+footer form label {
+    color:white;
+}
+footer input[type="email"] {
+    border:none;
+    padding: 10px;
+    border-radius:10px;
+}
+footer input[type="email"]:focus {
+    background-color: rgb(248, 203, 118);
+
+}
+footer input[type="button"] {
+    padding:10px;
+    border-radius:5px;
+    background-color: black;
+    color: white;
+    border:none;
+    cursor: pointer;
+}
+footer input[type="button"]:hover {
+    background-color: rgb(0, 102, 127);
+}
+section:nth-of-type(2) h2{
+    color: white;
+    font-size: 40px;
+}
+section:nth-of-type(2) h2:hover{
+    transform: scale(1.1);
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+section h2 {
+    transition: all 1s;
+}
+section a:link, section a:visited {
+    color:blue;
+}
+* {
+    scroll-behavior: smooth;
+}
+section ol {
+    margin: 20px 0px;
+}
+section h3 {
+    transition: all 0.5s;
+
+}
+section h3:hover {
+    letter-spacing: 2px;
+}
+main p {
+    line-height: 1.8em;
+    font-weight: 12px;
+}
+section details {
+    margin: 20px 0px;
+    cursor: pointer;
+}
+details table td {
+    padding: 5px;
+    margin: 25px 0px;
+}
+details table {
+    margin: 25px 0px;
+}
+
+
 
