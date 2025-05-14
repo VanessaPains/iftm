@@ -1,1 +1,11 @@
+.configuracao {
+    color: red;
+    background-color: #ffff00;
+}
+
+body h2{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
 
