@@ -1,1 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: black
+
+}
+
+header h1, header p{
+    text-align: right;
+    padding: 15px;
+}
+
+header h1{
+    background-color: black;
+    color: white;
+    font-family: oswald, sans-serif;
+}
+
+header p{
+    background-color: rgb(100, 98, 98);
+    color: white;
+    font-weight: bold;
+}
+
+/* Menu: Inicio */
+header nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: rgb(104, 104, 195);
+}
+header nav ul li {
+    display: inline-block;
+    /*border: 1px solid black;*/
+}
+header nav a:link, header nav a:visited {
+    display: inline-block;
+    padding:40px 25px 10px 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-image: url('../img/logos_gray_transparent_70x70.png');
+    background-repeat: no-repeat;
+    background-position: center -15px;
+} 
+header nav a:hover {/*quando se passa o mouse sobre o link*/
+    color: yellow;
+    background-image: url('../img/logos_resized_70x70.png');
+    background-repeat: no-repeat;
+    background-position: center -15px;
+}
+/* Menu:Fim */
+
+/* inicio MAIN */
+main section h2{
+    color: black;
+    transition: all 0.5s;
+    margin-bottom: 30px;
+}
+
+main section h2:hover{
+    letter-spacing: 5px;
+}
+
+main section a:link, main section a:visited {
+    text-decoration: underline;
+    color: #0000FF !important;
+}
+
+main section a:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+section{
+    width: 1200px;
+    background-color: white;
+    margin: auto;
+    padding: 40px;
+}
+
+section p {
+    line-height: 1.5em;
+    margin:25px 0px;
+    text-align: justify;
+}
+section ul {
+    margin-left: 50px;
+}
+
+section ul li {
+    line-height: 1.5em;
+}
+
+section p #p1{
+    font-weight: bold;
+}
+
+section p #p2{
+    text-decoration: underline;
+}
+
+section p #p3{
+    font-style: italic;
+}
+
+section p #p4{
+    text-decoration: line-through;
+}
+
+section img {
+    margin-bottom: 40px;
+    margin-top:40px;
+    width:500px;
+    display:block;
+    margin:auto;
+}
+
+footer {
+    background-color: gray;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    color: white;
+}
+
+footer a:link, footer a:visited {
+    color: lightblue !important;
+}
+
+
 
