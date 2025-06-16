@@ -1,1 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 
+body {
+    font-family: sans-serif;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*cabeçalho*/
+.cabecalho h1{
+    margin-top: 0px;
+    padding: 0px 0px 5px 0px;
+    color: rgb(247, 117, 11);
+}
+
+.cabecalho img {
+    width: 30px;
+    margin: 30px  0px 5px 0px;
+}
+
+.cabecalho .icones{
+    text-align: center;
+    border-bottom: 2px solid #f7750b;
+    margin: 0 auto; /* Centraliza a linha */
+    padding-bottom: 10px;
+}
+
+.cabecalho h2{
+    padding: 40px;
+}
+
+.cabecalho p{
+    width: 70%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff5252;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/*fim cabeçalho*/
+
+.tecnologias > .container,
+.portfolio > .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+}
+
+
+.tecnologias h2,
+.portfolio h2 {
+    width: 100%;
+    text-align: center;
+    margin-left: 43%;
+    margin-right: 50%;
+    border-bottom: 2px solid #f7750b;
+    color: rgb(247, 117, 11);
+    margin-bottom: 50px;
+
+}
+
+/*tecnologias*/
+.tecnologias {
+    background-color: #cecece;
+    padding: 40px 40px;
+}
+
+.tecnologias img {
+    width: 180px;
+    text-align: center;
+}
+
+.tecnologias p {
+    text-align: justify;
+    width: 180px;
+
+}
+
+.tecnologias h3 {
+    text-align: center;
+    width: 180px;
+    padding: 20px;
+
+}
+
+
+/*portilio*/
+.portfolio h2 {
+    margin-bottom: 20px;
+    color: rgb(18, 18, 18);
+    font-weight: bold;
+        color: rgb(247, 117, 11);
+}
+
+section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 20px 1%;
+}
+
+
+
+.portfolio  img {
+    width: 250px;
+    text-align: left;
+
+}
+
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
