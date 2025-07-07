@@ -1,1 +1,245 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;/** Fonte padrão do corpo */
+    background-color: #f0f0f0;/** Cor de fundo do corpo */
+}
+
+header > nav ul{
+    list-style: none;/** Remove a bolinha da lista*/
+    display: flex;
+    flex-direction: column;/** Coloca os itens em coluna */
+}
+
+header > nav > ul > li > a:link, header > nav > ul > li > a:visited{
+    text-decoration: none;/** Remove o sublinhado do link */
+    color: black;/** Cor do texto do link */
+    display: block;/** Faz o link ocupar toda a área do item da lista */
+    text-align: center;/** Centraliza o texto do link */
+    padding: 10px;/** Adiciona um espaçamento interno ao link */
+}
+
+header > nav ul li a:hover{
+    background-color:#2f2e2e;/** Cor de fundo ao passar o mouse */
+    color: white;/** Cor do texto ao passar o mouse */
+}
+
+section:nth-of-type(odd){
+    background-color: #2f2e2e;/** Cor de fundo da seção */
+    text-align: center;
+    color: white;
+}
+
+section p{
+    margin: 30px 0;/** Adiciona uma margem vertical ao parágrafo */
+}
+
+.section_aplicativos > div > p{
+    text-align: justify;
+}
+
+section{
+    padding: 30px;/** Adiciona um espaçamento interno à seção */
+}
+
+section img{
+    max-width: 100%;/** Imagem ocupa toda a largura da seção */
+    height: auto;/** Altura automática para manter a proporção */
+}
+
+section p{
+    line-height: 1.5em;
+}
+
+input[type="button"]{
+    background-color: rgb(3, 3, 176);/** Cor de fundo do campo de texto */
+    color: white;/** Cor do texto do campo de texto */
+    border: none;/** Remove a borda do campo de texto */
+    padding: 15px;/** Adiciona um espaçamento interno ao campo de texto*/
+    font-size: 16px;/** Tamanho da fonte do campo de texto */
+    margin-top: 20px;/** Margem superior do campo de texto */
+    cursor: pointer;/** Muda o cursor para indicar que é clicável */
+    border-radius: 5px;/** Bordas arredondadas do campo de texto */
+}
+
+input[type="button"]:hover{
+    background-color: rgb(2, 2, 97);/** Cor de fundo ao passar o mouse */
+}
+
+.section_planos > div > div{
+    text-align: center;/** Centraliza o texto dentro do div */
+    padding: 30px 0px;/** Adiciona um espaçamento interno vertical */
+}
+
+.section_planos > div > div > p{
+    text-align: justify;/** Justifica o texto do parágrafo */
+}
+
+.section_planos > div > div > h2{
+    color: red;/** Cor do título */
+    font-size: 20px;/** Tamanho da fonte do título */
+    margin: 5px 0px 20px 0px;/** Margem do título */
+}
+
+.section_planos > div, .section_produtos > div{
+    display: flex;/** Usa flexbox para layout */
+    flex-direction: column;/** Coloca os itens em coluna */
+}
+
+.section_produtos > div > div{
+    text-align: center;/** Centraliza o texto dentro do div */
+}
+
+.section_produtos > div > div > p{
+    text-align: justify;/** Justifica o texto dentro do div */
+}
+
+.section_produtos input[type="button"]{
+    margin: 0px;
+}
+
+figcaption{
+    font-size: 18px;/** Tamanho da fonte da legenda */
+    font-weight: bold;/** Negrito da legenda */
+    padding-top: 10px;/** Espaçamento superior da legenda */
+}
+
+/*sessão clientes principais*/
+.clientes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: auto;
+    min-width: unset;
+    background: rgb(104, 102, 102);
+    border-radius: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+}
+
+.section_principais_clientes h2{
+    font-size: 24px;
+}
+
+.section_principais_clientes summary{
+    margin-top: 15px;
+}
+
+.section_principais_clientes figcaption{
+    margin-top: 0px;
+}
+
+.cliente img {  
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.nome-cliente {
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.comentarios {
+    color: black;
+    margin-top: 8px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 10.95em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+/*footer - rodape*/
+footer{
+    background-color: black;/** Cor de fundo do rodapé */
+    padding: 20px;/** Adiciona um espaçamento interno ao rodapé */
+}
+
+footer p{
+    color: white;/** Cor do texto do rodapé */
+    text-align: center;
+    
+}
+
+
+
+/*FIM Versão mobile*/
+
+/*Versão tablet e desktop*/
+@media screen and (min-width: 768px) {
+    header > nav ul{
+        flex-direction: row;/** Coloca os itens em linha */
+        justify-content: right;/** Alinha os itens à direita */
+    }
+
+    header > nav > ul > li > a:link, header > nav > ul > li > a:visited{
+        padding: 15px 25px;/** Adiciona um espaçamento interno ao link */
+    }
+    
+    /*sessão apresentacao*/
+    .section_apresentacao > div{
+        width: 1200px;/** Largura máxima do conteúdo */
+        margin: auto;/** Centraliza o conteúdo na página */
+    }
+
+    /*sessão planos*/
+    .section_planos > div, .section_produtos > div{
+         flex-direction: row;/** Coloca os itens em linha */
+    }
+
+    .section_planos > div > div, .section_produtos > div > div{
+        padding: 0px 25px;/** Adiciona um espaçamento interno vertical */
+    }
+
+
+    section > div{
+        max-width: 1200px;/** Largura máxima da moldura */
+        margin: auto;/** Centraliza a moldura na página */
+    }
+
+    section{
+        padding: 50px;/** Adiciona um espaçamento interno à seção */
+    }
+
+    figcaption{
+    font-size: 24px;/** Tamanho da fonte da legenda */
+    }
+
+    /*sessão principais clientes*/
+    .clientes-container {
+        flex-direction: row;
+        gap: 32px;
+    }
+    .cliente {
+        width: 20%;
+        height: 20%;
+        padding: 16px;
+    }
+
+    .cliente img{
+        width: 200px;
+    }
+    
+}
+
+
 
