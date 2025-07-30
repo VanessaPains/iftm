@@ -169,6 +169,8 @@ main section {
 
 
 
+
+
 /* ===== CONCEITOS EMBAIXO DA IMAGEM DO BANNER DA PAGINA HOME===== */
 .container-caixa-conceitos {
     display: flex;
@@ -203,7 +205,11 @@ main section {
 .conceitos-conteudo:hover {
     transform: scale(1.03);
 }
+
 /* ===== FIM CONCEITOS ===== */
+
+
+
 
 
 
@@ -246,13 +252,16 @@ input[type="button"]:hover {
 
 
 
+
+
+
 /* ===== SEÇÃO SOBRE ===== */
 #section_sobre {
     text-align: justify;
 }
 
 #section_sobre img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
@@ -301,7 +310,10 @@ input[type="button"]:hover {
     color: #333333;
     margin: -2px 0;
 }
+
 /* ===== FIM - SEÇÃO MISSÃO, VISÃO E VALORES ===== */
+
+
 
 
 
@@ -324,8 +336,6 @@ input[type="button"]:hover {
     background-color: #ffffff;
     padding: 5px;
 }
-
-
 
 .container-servicos img {
     width: 100%;
@@ -361,6 +371,126 @@ input[type="button"]:hover {
 
 /* ===== FIM - SEÇÃO SERVIÇOS ===== */
 
+
+
+
+
+/* ===== INICIO - SEÇÃO VANTAGENS ===== */
+#section_vantagens li {
+    list-style: -moz-linear-gradient(#00cc66);
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 50px;
+}
+
+/* ===== FIM - SEÇÃO VANTAGENS ===== */
+
+
+
+
+
+/* =====INICIO GALERIA DE FOTOS ===== */
+.galeria-servicos {
+    padding: 40px;
+    text-align: center;
+}
+
+.container-galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria-grid {
+    width: 300px;
+}
+
+.bloco-servico {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.bloco-servico img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.bloco-servico:hover img {
+    transform: scale(1.05);
+}
+
+.titulo-servico {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.lightbox:target {
+    display: block;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.lightbox .fechar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.navegacao a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.navegacao a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== FIM DA SEÇÃO GALERIA ===== */
 
 
 
@@ -538,10 +668,6 @@ section blockquote {
 
 
 /* ===== DEPOIMENTOS ===== */
-#depoimentos {
-
-}
-
 #depoimentos h2 {
     font-size: 28px;
     margin-bottom: 40px;
@@ -737,10 +863,10 @@ footer p {
     }
 
     #section_sobre p {
-        padding-right: 50px;
-        line-height: 2.8;
+        padding-right: -100px;
+        line-height: 1.8;
         margin-top: -180px;
-        font-size: 20px;
+        font-size: 14px;
         margin-bottom: 20px;
         margin-top: 50px;
 
@@ -751,9 +877,10 @@ footer p {
     }
 
     #section_sobre h2,
-    #section_servicos h2 {
+    #section_servicos h2,
+    #section_vantagens h2 {
         flex-direction: column;
-        font-size: 30px;
+        font-size: 24px;
     }
 
 

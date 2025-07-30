@@ -1,4 +1,3 @@
-
 function incluirHTML() {
   const elementos = document.querySelectorAll('[data-include]');
   elementos.forEach(async el => {
