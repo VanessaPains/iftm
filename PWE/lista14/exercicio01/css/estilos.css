@@ -1,0 +1,19 @@
+h1{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Verdana';
+    letter-spacing: 4px;
+    border-bottom: 2px solid red;
+    background-color: yellow;
+    color: rgb(11, 84, 11);
+}
+
+p{
+    background-color: rgb(187, 187, 198);
+    font-size: 18px;
+    color: green;
+    line-height: 2em;
+    font-style: italic;
+    font-family: tahoma;
+    text-align: center;
+}
