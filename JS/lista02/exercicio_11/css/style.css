@@ -1,1 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
 
+h1,
+h2 {
+    color: rgb(8, 8, 8);
+}
+
+h3 {
+    color: red;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 30%;
+    padding-right: 30%;
+    text-align: center;
+}
