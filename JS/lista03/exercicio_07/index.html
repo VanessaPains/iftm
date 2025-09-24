@@ -1,1 +1,58 @@
+<!--
+7 - Crie uma página HTML capaz de validar o acesso de determinado usuário. A interface a ser
+implementada deverá ser composta pelos mesmos elementos mostrados na figura a seguir:
+-->
 
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+
+        <h1>Acesso ao Sistema</h1>
+
+        <form>
+            <table align="center">
+                <tr>
+                    <td>Login:</td>
+                    <td><input type="text" id="login"></td>
+                </tr>
+                <tr>
+                    <td>Senha:</td>
+                    <td>
+                        <input type="password" id="senha" maxlength="8">
+                        <span class="aviso">(max. 8 caracteres)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confirmar Senha:</td>
+                    <td>
+                        <input type="password" id="confirmaSenha" maxlength="8">
+                        <span class="aviso">(max. 8 caracteres)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center;">
+                        <button type="button" id="btnEntrar">Entrar</button>
+                        <button type="button" id="btnLimpar">Limpar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+    </main>
+    <footer></footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
