@@ -1,1 +1,56 @@
+<!--
+6 - Esta página consiste em uma calculadora contendo apenas as operações de soma (+), subtração (-),
+multiplicação (*) e divisão (/). Para utilizá-la, o usuário deverá digitar o primeiro e segundo valores
+dentro das caixas “1o Valor” e “2o Valor”, respectivamente, e em seguida clicar sobre o botão
+correspondente a operação desejada. O resultado deverá ser exibido na última caixa “Resultado”.
+OBS: Trate a divisão por zero, além disso, as operações (+, -, * ou /) só poderão ser realizadas se
+houverem números digitados dentro de cada uma das caixas (1o e 2o valor).
+-->
 
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h2>Calculadora</h2>
+        <form action="">
+            <div>
+                <label for="valor1">1º Valor:</label>
+                <input id="valor1" type="text" id="valor1">
+            </div>
+
+            <div>
+                <label for="valor2">2º Valor:</label>
+                <input id="valor2" type="text" id="valor2">
+            </div>
+
+            <div>
+                <input type="button" value="+" id="btnSoma">
+                <input type="button" value="-" id="btnSub">
+                <input type="button" value="*" id="btnMult">
+                <input type="button" value="/" id="btnDiv">
+            </div>
+
+
+            <div >
+                <label for="resultado">Resultado:</label>
+                <input id="resultado" type="text">
+            </div>
+        </form>
+
+
+    </main>
+    <footer></footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
