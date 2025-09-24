@@ -1,1 +1,22 @@
 
+h1 {
+    font-size: 24px;
+    color: blue;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+table {
+    margin-top: 20px;
+}
+
+input[type="text"]{
+    width: 100%;
+}
+
+.aviso {
+    color: red;
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    margin-left: 5px;
+}
