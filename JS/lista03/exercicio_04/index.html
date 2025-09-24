@@ -1,1 +1,40 @@
+<!--
+4 - O objetivo desta página é informar ao usuário, através de uma mensagem de alerta, se ele foi
+aprovado ou não em uma determinada disciplina. Para isso, o aluno deverá informar as notas do
+1o e 2o bimestres e, em seguida, clicar sobre o botão “Resultado”. Cada bimestre vale 50,0 pontos.
+Um aluno será aprovado se a soma das notas for maior ou igual a 60,0 pontos.
 
+Sugestão: Utilizar o conceito de tabela para organizar os elementos do formulário. A tabela poderá
+estar centralizada horizontalmente em relação a janela do navegador.
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercucio 04</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <form action="">
+            <div>
+                <label for="nome">Nome/Notas: (1º Semestre)</label>
+                <input type="text" id="nota1" name="nota1">
+            </div>
+
+            <div>
+                <label for="nome">Nome/Notas: (2º Semestre)</label>
+                <input type="text" id="nota2" name="nota2">
+            </div>
+            <div>
+                <input type="button" value="Resultado" id="btnSoma">
+            </div>  
+        </form>
+    </main>
+    <footer></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
