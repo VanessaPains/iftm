@@ -1,1 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+div {
+    margin: 10px;
+}
+
+div input[type="button"] {
+    text-align: center;
+    width:40px;
+    margin-top: 2px;
+    margin-left: 3px;
+    padding: 5px;
+}
+
+div input[id="valor1"], div input[id="valor2"] {
+    width: 130px;
+}
+
+
+div input[id="resultado"] {
+    width: 115px;
+}
