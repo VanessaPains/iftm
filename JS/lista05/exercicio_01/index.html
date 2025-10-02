@@ -1,1 +1,65 @@
+<!--
+1. Construir uma página web contendo um ÚNICO personagem que irá interagir com o usuário, a partir de uma das quatro imagens abaixo:
+-Pensativo
+-Nervoso
+-Assustado
+-Alegre
 
+Regras
+- O personagem deverá estar centralizado horizontalmente e verticalmente em relação ao viewport da página;
+- Apenas uma única imagem deverá estar visível ao usuário e ela deverá ser alterada a medida que o usuário for interagindo com ela;
+- As quatro imagens (Pensativo, Assustado, Alegre e Nervoso) estão disponíveis dentro da pasta “Imagens” (anexo);
+- Abaixo da imagem do personagem deverá ser exibida uma mensagem compatível a ele, conforme descrito a seguir:
+
+- Estado inicial (após o carregamento da página): 
+    *Personagem ativo: “Pensativo”
+    * Mensagem (abaixo do personagem): “zzzzzzzzz!”
+
+- Ao posicionar o cursor do mouse sobre a imagem: 
+    * Personagem ativo: “Assutado”
+    * Mensagem (abaixo do personagem): “O que você quer?”
+
+- Ao clicar com o botão esquerdo do mouse sobre o personagem: 
+    * Abrir um prompt e pedir ao usuário o nome dele. Poderá haver dois cenários:
+
+    * 1º cenário: Se o usuário clicar sobre o botão “Ok” sem nenhum texto ou clicar sobre o botão “Cancelar” da caixa de diálogo, deverá aparecer:
+        --- Personagem ativo: “Nervoso”
+        --- Mensagem (abaixo do personagem): “Não me faça perder o meu tempo!”
+
+
+    * 2º cenário: Se o usuário clicar sobre o botão “Ok” e houver alguma informação dentro da caixa de texto da caixa de diálogo, deverá aparecer:
+        --- Personagem ativo: “Alegre”
+        --- Mensagem: “<NOME_INFORMADO>, seja bem-vindo!”
+
+- Sempre que o usuário retirar o cursor do mouse sobre o personagem: 
+    * Personagem ativo: “Pensativo”
+    * Mensagem (abaixo do personagem): “zzzzzzzzz!”
+
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <div id="container">
+            <img id="personagem" src="img/Pensativo-transparente.png" alt="Personagem">
+            <p id="mensagem">zzzzzzzzz!</p>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
