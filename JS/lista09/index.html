@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 09 - Expressões Regulares</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header></header>
+    <main>
 
+        <form action="">
+            <label for="txtDataNasc">Data de Nascimento:</label>
+            <input type="text" id="txtDataNasc" value="23/09/1986">
+            <input type="button" id="btnValidarDataNasc" value="Validar"/><br>
+
+            <label for="txtCpf">CPF:</label><!--(jwifi)-->
+            <input type="text" id="txtCpf" value="111.111.111-11" onkeypress="inserirMascara('txtCpf','xxx.xxx.xxx-xx')">
+            <input type="button" id="btnValidarCpf" value="Validar"/><br>
+
+            <label for="txtNrMatricula">Número de Matrícula:</label>
+            <input type="text" id="txtNrMatricula" value="IFTM-123/789-ab">
+            <input type="button" id="btnValidarNrMatricula" value="Validar"/><br>
+
+            <label for="txtCodDisciplinaV1">Codigo da Disciplina - Versão 1:</label><!--(jwifi)-->
+            <input type="text" id="txtCodDisciplinaV1" value="MT-09.015-IFTM" onkeypress="inserirMascara('txtCodDisciplinaV1','yy-xx.xxx-yyyy')">
+            <input type="button" id="btnValidarCodDisciplinaV1" value="Validar"/><br>
+
+            <label for="txtCodDisciplinaV2">Codigo da Disciplina - Versão 2:</label><!--(jwifi)-->
+            <input type="text" id="txtCodDisciplinaV2" value="MT-09.015-iftm" onkeypress="inserirMascara('txtCodDisciplinaV2','YY-xx.xxx-yyyy')">
+            <input type="button" id="btnValidarCodDisciplinaV2" value="Validar"/><br>
+
+            <label for="txtCodDisciplinaV3">Codigo da Disciplina - Versão 3:</label>
+            <input type="text" id="txtCodDisciplinaV3" value="M T-09.015-i f t m">
+            <input type="button" id="btnValidarCodDisciplinaV3" value="Validar"/><br>
+
+            <label for="txtCodDisciplinaV4">Codigo da Disciplina - Versão 4:</label>
+            <input type="text" id="txtCodDisciplinaV4" value="M T-09.015-i f t m Uberlândia">
+            <input type="button" id="btnValidarCodDisciplinaV4" value="Validar"/><br>
+
+            <label for="txtNomeCampus">Nome do Campus IFTM:</label>
+            <input type="text" id="txtNomeCampus" value="IFTM campus Uberlândia">
+            <input type="button" id="btnValidarNomeCampus" value="Validar"/><br>
+
+            <label for="txtTelefoneV1">Telefone - Versão 1:</label><!--(jwifi)-->
+            <input type="text" id="txtTelefoneV1" value="+55(34)99670-9999" onkeypress="inserirMascara('txtTelefoneV1','+yy(xx)xxxxx-xxxx')">
+            <input type="button" id="btnValidarTelefoneV1" value="Validar"/><br>
+
+            <label for="txtTelefoneV2">Telefone - Versão 2:</label>
+            <input type="text" id="txtTelefoneV2" value="+55(034)99670-9999">
+            <input type="button" id="btnValidarTelefoneV2" value="Validar"/><br>
+
+            <label for="txtAltura">Altura:</label>
+            <input type="text" id="txtAltura" value="2.0">
+            <input type="button" id="btnValidarAltura" value="Validar"/><br>
+
+            <label for="txtFaturamentoAnual">Faturamento Anual:</label>
+            <input type="text" id="txtFaturamentoAnual" value="R$3.500,00">
+            <input type="button" id="btnValidarFaturamentoAnual" value="Validar"/><br>
+
+            <label for="txtCronometro">Cronometro:</label><!--(jwifi)-->
+            <input type="text" id="txtCronometro" value="15:24:45:15" onkeypress="inserirMascara('txtCronometro','HH:MM:SS:CC')">
+            <input type="button" id="btnValidarCronometro" value="Validar"/><br>
+
+            <label for="txtSenha">Senha:</label>
+            <input type="text" id="txtSenha" value="3211a.&apMb.aei.Ab0-asf+_,/*.cq">
+            <input type="button" id="btnValidarSenha" value="Validar"/><br>
+
+        </form>
+
+    </main>
+    <footer></footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/jMaskWiFi.js"></script>
+</body>
+</html>
