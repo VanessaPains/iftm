@@ -26,9 +26,16 @@ form label {
     font-weight: bold;
 }
 
+form input{
+    width: 40%;
+}
+
+[type="button"] {
+    width: 10%;
+}
+
 form input,
 form textarea {
-    width: 30%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
