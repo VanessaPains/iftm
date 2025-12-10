@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Naval</title>
+    <link rel="stylesheet" href="css/jogo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Batalha Naval</h1>
+        <p><strong id="nomeJogador"></strong> VS <strong>Lumi (Computador)</strong></p>
+    </header>
+
+    <main>
+        <section id="painel-controle">
+            <!-- Dificuldades -->
+            <span id="btn-sair-reiniciar-jogo">
+                <button id="btnReiniciar">Reiniciar</button>
+                <button id="btnSair">Sair</button>
+
+            </span>
+            <div>
+                <label for="dificuldade">Dificuldade:</label>
+                <select id="dificuldade">
+                    <option value="8">Fácil (8x8)</option>
+                    <option value="10" selected>Médio (10x10)</option>
+                    <option value="15">Difícil (15x15)</option>
+                </select>
+            </div>
+
+            <!-- Botões do cronômetro -->
+            <div>
+                <button id="btnPlay">Play</button>
+                <button id="btnPause">Pause</button>
+                <button id="btnStop">Stop</button>
+
+            </div>
+
+            <!-- Cronômetro exibido -->
+            <div>
+                <label>Tempo: </label>
+                <span id="timer">00:00</span>
+            </div>
+        </section>
+
+        <section id="area-jogo">
+            <!-- Painel lateral de navios -->
+            <div id="painel-navios">
+                <h3>Navios</h3>
+
+                <!-- Lista dos navios -->
+                <div id="lista-navios"></div>
+
+                <!-- Botão de rotacionar (mantido) -->
+                <button id="btnOrientacao">Orientação: Horizontal</button>
+                <button id="btnLimparPosicoes">Limpar Posições</button>
+            </div>
+
+
+            <!-- Tabuleiro do jogador -->
+            <div class="coluna-tabuleiro">
+                <h3 id="tituloTabuleiro">Seu Tabuleiro</h3>
+                <div class="stats" id="statsJogador" style="margin-top:2px;text-align:center;">
+                    Tiros: <span id="tirosJog">0</span>
+                    Acertos: <span id="acertosJog">0</span>
+                    Tempo: <span id="timeJog">00:00</span>
+                </div>
+                <div class="tabuleiro-container">
+                    <div class="labels-top" id="labelsTopJogador"></div>
+                    <div class="labels-left" id="labelsLeftJogador"></div>
+                    <div id="tabuleiroJogador" class="tabuleiro"></div>
+                </div>
+            </div>
+
+            <!-- Tabuleiro do Lumi -->
+            <div class="coluna-tabuleiro">
+                <h3>Tabuleiro do Lumi</h3>
+                <div class="stats" id="statsCPU" style="margin-top:2px;text-align:center;">
+                    Tiros: <span id="tirosCPU">0</span>
+                    Acertos: <span id="acertosCPU">0</span>
+                    Tempo: <span id="timeCPU">00:00</span>
+                </div>
+                <div class="tabuleiro-container">
+                    <div class="labels-top" id="labelsTopCPU"></div>
+                    <div class="labels-left" id="labelsLeftCPU"></div>
+                    <div id="tabuleiroCPU" class="tabuleiro"></div>
+                </div>
+            </div>
+
+            <!-- Ranking (faremos depois) -->
+            <div id="coluna-ranking">
+                <div class="ranking-area">
+                    <h3>Ranking</h3>
+                    <ul id="ranking-lista">
+                        <li>Nível: Nenhum</li>
+                        <li>Tempo: 0</li>
+                        <li>Tiros: 0</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <button id="btnMostrarCPU" style="width:10%;margin-top:10px;">Mostrar Navios CPU</button>
+    </main>
+
+
+
+    <!-- Rodapé com seu nome -->
+    <footer>
+        <div>
+            <div >
+                <p >Desenvolvido por <strong>Vanessa Pains Fonseca</strong></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jogo.js"></script>
+
+</body>
+
+</html>
