@@ -1,0 +1,143 @@
+/* ====== FUNDO IGUAL AO INDEX ====== */
+.cadastro-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    /* mesmo fundo da index + overlay escuro */
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.70)),
+        url('../img/fundo-batalha-naval.jpg') no-repeat center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 50, 100, 0.45);
+    backdrop-filter: blur(3px);
+}
+
+h1{
+    font-size: 40px;
+}
+
+/* ====== FORMULÁRIO EM ESTILO DE JOGO ====== */
+.container-cadastro {
+    width: 90%;
+    max-width: 420px;
+
+    background: rgba(0, 0, 0, 0.55); /* caixa translúcida */
+    padding: 30px;
+    border-radius: 15px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+
+    backdrop-filter: blur(6px);
+
+    
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    gap: 20px;
+}
+
+
+
+/* ====== TÍTULO ====== */
+.container-cadastro h1 {
+    text-align: center;
+    color: #00bfff;
+    text-shadow: 0 0 8px #000;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+
+
+/* ====== INPUT ====== */
+.container-cadastro input {
+    width: 80%;
+    padding: 12px;
+
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #0077ff;
+
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+}
+
+
+
+/* ====== BOTÃO ENTRAR ====== */
+.btn-cadastrar {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #008cff, #004aff);
+    color: white;
+
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+
+    box-shadow: 0 0 10px #004aff;
+}
+
+.btn-cadastrar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #008cff;
+}
+
+
+
+/* ====== LINK CADASTRO ====== */
+.link-cadastro {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+
+    color: white;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+
+    /* contorno preto */
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+.link-cadastro:hover {
+    color: #00e1ff;
+}
+
+
+/* Rodapé */
+footer {
+    text-align: center;
+    color: thistle;
+
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+    background: rgba(0, 50, 100, 0.45);
+    backdrop-filter: blur(3px);
+}

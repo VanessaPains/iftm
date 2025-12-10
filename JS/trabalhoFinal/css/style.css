@@ -1,1 +1,87 @@
+/* ===== TELA INICIAL (index.html) ===== */
 
+body.inicio {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+
+
+     /* Imagem de fundo grande */
+    background: url('../img/fundo-batalha-naval.jpg') no-repeat center center/cover;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+        /* Imagem da logo*/
+    background: url('../img/logo-batalha-naval-prc.png') no-repeat center center/cover;
+
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 50, 100, 0.45);
+    backdrop-filter: blur(3px);
+
+}
+
+h1{
+    font-size: 40px;
+}
+
+.inicio-container {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    gap: 20px;
+}
+
+/* Botão JOGAR */
+.btn-jogar {
+    background: #0090ff;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 42px;
+    font-family: 'Bungee', sans-serif;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+
+    transition: 0.3s;
+}
+
+.btn-jogar:hover {
+    transform: scale(1.1);
+    background: #33aaff;
+}
+
+.link-cadastro {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+
+    /* CONTORNO PRETO */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+/* Rodapé */
+footer {
+    background: rgba(0, 40, 80, 0.85);
+    padding: 12px;
+    text-align: center;
+    color: thistle;
+}
