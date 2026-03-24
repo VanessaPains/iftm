@@ -1,1 +1,7 @@
-
+[
+  { "username": "wilton.filho", "password": "wilton123" },
+  { "username": "maria.jose", "password": "123maria" },
+  { "username": "teste1", "password": "teste111" },
+  { "username": "teste2", "password": "222teste" },
+  { "username": "ana.carol", "password": "ana123carol" }
+]
