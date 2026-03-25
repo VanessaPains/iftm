@@ -1,7 +1,9 @@
 [
-  { "username": "wilton.filho", "password": "wilton123" },
-  { "username": "maria.jose", "password": "123maria" },
-  { "username": "teste1", "password": "teste111" },
-  { "username": "teste2", "password": "222teste" },
-  { "username": "ana.carol", "password": "ana123carol" }
+  { "username": "wilton.filho", "password": "$2a$10$jcOjwNSXV.Ap0K3ln3Hdm.4KnCeifPExxxLGDrLo8xO1q0HaJOhtm" },
+  { "username": "maria.jose", "password": "$2a$10$P6tCswOktdLy/oadVszC.eQ0gAcu.Ho9zMltIt/ejYtQ.fGZ1c9cO" },
+  { "username": "teste1", "password": "$2a$10$cMpS2v8Nvi.S8/aDcQKIserOMfsm3EolXRnhY8cKRpsQ1EMWxsgZm" },
+  { "username": "teste2", "password": "$2a$10$DMQMlPGbulSrTOcpxfpmCej8Dbvn/URZEEWeR8k69XbxFzVfVQ2tO" },
+  { "username": "ana.carol", "password": "$2a$10$jHGafNGH7H.55l9LUveclefaTbdb50w8oaXABTXlmK9ji/P3ZLCxa"  }
 ]
+
+
