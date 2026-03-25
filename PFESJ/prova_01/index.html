@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="login-container">
+        <h2>Login do Sistema</h2>
+
+        <form id="formLogin">
+            <div class="input-group">
+                <label>Usuário</label>
+                <input type="text" id="username" placeholder="Digite seu usuário" required>
+            </div>
+
+            <div class="input-group">
+                <label>Senha</label>
+                <!--deixe password aberto como texto-->
+                <input type="text" id="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p id="mensagem"></p><!--mostrar mensagens abaixo no formulario de - ou + o login-->
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>
