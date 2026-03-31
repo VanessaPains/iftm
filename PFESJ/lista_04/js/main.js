@@ -120,6 +120,9 @@ window.mostrarDetalhes = (id) => {
         .map(id => mapaGenerosGlobal[id]) // troca id por nome
         .join(", "); // junta em texto separado por vírgula
 
+    // Formata a data para padrão brasileiro (dd/mm/aaaa)
+    const dataFormatada = new Date(filme.release_date).toLocaleDateString('pt-BR');
+
     //aqui vai monta o HTML com as informações do filme
     detalhes.innerHTML = `
         <div class="detalhesContainer">
@@ -141,8 +144,20 @@ window.mostrarDetalhes = (id) => {
                 <!-- Gêneros -->
                 <p class="generos">🎭 ${generos}</p>
 
+                <!-- Data Lançamento -->
+                <p>📅 Lançamento: ${dataFormatada}</p>
+
+                <!-- Popularidade -->
+                <p>🔥 Popularidade: ${filme.popularity}</p>
+
+                <!-- Votos -->
+                <p>🗳️ Votos: ${filme.vote_count}</p>
+
+                <!-- Idioma -->
+                <p>🌍 Idioma: ${filme.original_language.toUpperCase()}</p>
+
                 <!-- Descrição -->
-                <p class="descricao">${filme.overview}</p>
+                <p class="descricao" magin-top=10px>${filme.overview}</p>
 
 
                 <!- BOTÕES -->
