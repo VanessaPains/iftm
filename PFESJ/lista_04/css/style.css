@@ -322,6 +322,10 @@ main div {
     border-radius: 10px;
 }
 
+#detalhesFilme p{
+    margin-bottom: 5px;
+}
+
 /* CONTAINER DETALHES */
 .detalhesContainer {
     display: flex;
