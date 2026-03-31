@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Crítica Movies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/main.js" type="module"></script>
+</head>
+
+<body>
+    <!-- MENU LATERAL -->
+    <aside id="menuLateral" class="menu">
+        <button id="fecharMenu">✖</button>
+
+        <img class="logoHeader" src="img/Logo_ Cine_Crítica_Movies.png">
+
+        <nav>
+            <ul>
+                <li class="ativo"><a class="logoHeader" href="index.html"></a>🔥 Populares</li>
+                <li>🎬 Ação</li>
+                <li>😂 Comédia</li>
+                <li>👻 Terror</li>
+                <li>🚀 Ficção Científica</li>
+            </ul>
+        </nav>
+    </aside>
+
+
+    <!-- HEADER -->
+    <header>
+        <!-- TOPO -->
+        <div class="headerTopo">
+
+            <!-- BOTÃO MENU -->
+            <button id="btnMenu">☰</button>
+
+            <!-- LOGO -->
+            <div class="logoHeader">
+                <a href="index.html" class="logoHeader">
+                    <img src="img/Logo_ Cine_Crítica_Movies.png" alt="Logo Cine Crítica">
+                </a>
+                <span>Cine Crítica Movies</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- Ranking -->
+        <div id="boxFilmes" class="gridFilmes"></div>
+
+        <!-- Detalhes -->
+        <section id="detalhesFilme">
+            
+            <section class="bemVindo">
+
+                <div class="bemVindoConteudo">
+
+                    <h1>Bem-vindo ao Cine Crítica</h1>
+
+                    <p>
+                        Uma plataforma dedicada a quem ama cinema. Aqui você pode explorar os filmes
+                        mais populares da atualidade, conhecer diferentes gêneros, acompanhar avaliações
+                        e encontrar facilmente sua próxima escolha. Tudo em um ambiente moderno,
+                        intuitivo e pensado para proporcionar a melhor experiência ao usuário.
+                    </p>
+
+                    <p class="subtexto">
+                        🎬 Seu guia inteligente para o mundo do cinema.
+                    </p>
+
+                    <div class="bemVindoInfo">
+                        <span>🔥 Filmes em alta</span>
+                        <span>⭐ Avaliações reais</span>
+                        <span>🎭 Diversos gêneros</span>
+
+                    </div>
+
+                    <button onclick="document.getElementById('boxFilmes').scrollIntoView({behavior:'smooth'})">
+                        Explorar Filmes
+                    </button>
+
+                </div>
+
+            </section>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div data-include="footer.html"></div>
+    </footer>
+
+
+
+</body>
+
+</html>
