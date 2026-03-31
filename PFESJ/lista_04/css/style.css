@@ -1,1 +1,508 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* FAZ O BODY OCUPAR TODA A ALTURA DA TELA */
+html,
+body {
+    height: 100%;
+}
+
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/*====== INICIO HEADER ======*/
+/* HEADER */
+.header {
+    background: #1c1c1c;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+        text-decoration: none; /* remove sublinhado */
+    color: inherit; /* mantém cor original */
+}
+
+/* TOPO */
+.headerTopo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* LOGO */
+.logoHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+
+    
+}
+
+a.logoHeader {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* IMAGEM DA LOGO */
+.logoHeader img {
+    width: 150px;
+}
+
+/* TEXTO DA LOGO */
+.logoHeader span {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f7f5f5;
+}
+
+/*====== FIM ======*/
+
+/*====== INICIO DO BOTAO LATERAL ======*/
+/* BOTÃO MENU */
+#btnMenu {
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+/* MENU LATERAL MODERNO */
+.menu {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 260px;
+    height: 100%;
+
+    background: rgba(24, 24, 24, 0.95);
+    backdrop-filter: blur(10px);
+
+    padding: 20px;
+    transition: 0.4s ease;
+
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENU ATIVO */
+.menu.ativo {
+    left: 0;
+}
+
+/* TÍTULO */
+.menu h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* LISTA */
+.menu ul {
+    list-style: none;
+}
+
+/* ITENS */
+.menu li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+.menu li:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+/* ITEM ATIVO */
+.menu li.ativo {
+    background: #e50914;
+    font-weight: bold;
+}
+
+/* BOTÃO FECHAR */
+#fecharMenu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* SCROLL DO MENU */
+.menu {
+    overflow-y: auto;
+}
+
+/* SCROLL BONITO */
+.menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 10px;
+}
+
+/*======== FIM DO BOTAO LATERAL*/
+
+
+
+/*====== INICIO MAIN ======*/
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+main div {
+    scrollbar-width: none;
+}
+
+
+/*====== INICIO GRID DE IMAGENS FILMES ======*/
+/* SCROLL HORIZONTAL */
+.gridFilmes {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+
+}
+
+/* CARD */
+.cardRanking {
+    position: relative;
+    min-width: 90px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* IMAGEM */
+.cardRanking img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* HOVER */
+.cardRanking:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* RANKING */
+.rankingNumero {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-size: 80px;
+    font-weight: bold;
+
+    color: rgba(195, 192, 192, 0.582);
+    -webkit-text-stroke: 1px rgb(236, 227, 227);
+
+    z-index: 2;
+    pointer-events: none;
+
+    padding-left: 6px;
+    padding-bottom: 3px;
+}
+
+/*====== FIM IMAGENS FILMES ======*/
+
+
+
+
+/* SEÇÃO DE BOAS-VINDAS */
+.bemVindo {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 20px;
+    padding-top: 400px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('../img/banner.jpg');
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.bemVindoConteudo {
+    margin-top: -400px;
+}
+
+/* TÍTULO */
+.bemVindo h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: #e50914;
+}
+
+/* TEXTO */
+.bemVindo p {
+    font-size: 24px;
+    margin-bottom: 25px;
+    width: 850px;
+    text-align: center;
+    color: rgba(249, 246, 246, 0.993);
+    -webkit-text-stroke: 0.5px rgb(252, 244, 244);
+}
+
+/* INFO */
+.bemVindoInfo {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.bemVindoInfo span {
+    background: #222;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+/* BOTÃO */
+.bemVindo button {
+    background: #e50914;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.bemVindo button:hover {
+    background: #ff1f1f;
+    transform: scale(1.05);
+}
+/*====== FIM ======*/
+
+
+/*====== INICIO DOS DETALHES DOS FILMES ======*/
+#detalhesFilme {
+    margin-top: 40px;
+    padding: 20px;
+    background: #1c1c1c;
+    border-radius: 10px;
+}
+
+/* CONTAINER DETALHES */
+.detalhesContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* IMAGEM */
+.detalhesImagem img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* INFO */
+.detalhesInfo {
+    max-width: 600px;
+}
+
+.nota {
+    color: #ffd700;
+    margin: 10px 0;
+}
+
+.generos {
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/*====== FIM DETALHES DOS FILMES ======*/
+
+
+
+
+/*====== INICIO BOTOES DE DETALHOES VOLTAR AO TOPO ======*/
+.acoesDetalhes {
+    display: flex;
+    justify-content: flex-start; /* 🔥 joga tudo pra direita */
+    padding-top: 20px;
+    position: relative;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* BOTÕES */
+.acoesDetalhes button {
+    background: #e50914;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.acoesDetalhes button:hover {
+    background: #ff1f1f;
+    transform: scale(1.05);
+}
+/*====== FIM BOTOES DE DETALHOES VOLTAR AO TOPO ======*/
+
+
+
+
+
+/*====== INICIO DO FOOTERL ======*/
+/* FOOTER MODERNO */
+.footer {
+    background: #0d0d0d;
+    border-top: 1px solid #222;
+}
+
+/* CONTAINER */
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    /* 🔥 centraliza tudo */
+    align-items: flex-start;
+
+    gap: 40px;
+    /* 🔥 controla distância entre colunas */
+
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.footerCol {
+    min-width: 140px;
+    /* 🔥 menor = mais compacto */
+    vertical-align: bottom;
+}
+
+.footerCol h3 {
+    padding-bottom: 10px;
+}
+
+.footerCol ul {
+    list-style: none;
+
+}
+
+.footerCol li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.footerCol li:hover {
+    color: #e50914;
+    transform: translateX(3px);
+
+}
+
+/* LOGO */
+.footerLogo h2 {
+    color: #e50914;
+}
+
+/* INFORMAÇÕES */
+.footerInfo {
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+    padding-top: 10px;
+}
+
+/* LINKS */
+.footerLinks {
+    margin-top: 15px;
+}
+
+.footerLinks span {
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footerLinks span:hover {
+    color: #e50914;
+}
+
+/* REDES */
+.footerRedes {
+    font-size: 22px;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.footerRedes span {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footerRedes span:hover {
+    transform: scale(1.2);
+}
+
+/* LOGO DO FOOTER */
+.logo {
+    width: 250px;
+}
+
+.logoCol {
+    display: flex;
+    align-items: center;
+}
+
+/* PARTE FINAL */
+.footerBottom {
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+/*====== FIM FOOTER ======*/
