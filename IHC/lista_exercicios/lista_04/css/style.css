@@ -10,6 +10,7 @@
     --space-6: 32px;
     --space-7: 48px;
     --space-8: 64px;
+    --space-9: 128px;
     --page-padding: 32px;
     --container-padding: 32px;
     --card-padding: 32px;
@@ -134,7 +135,11 @@ h2 {
     margin: var(--space-6) 0 var(--space-6);
     letter-spacing: -0.02em;
     margin-top: var(--space-6);
+    text-align: right;
+    letter-spacing: 0.22em;
 }
+
+
 
 /* Espaçamento de 24px entre os temas: separa os assuntos sem perder a unidade do minicurso. */
 .topic {
@@ -187,11 +192,21 @@ h2 {
 }
 
 .topic h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     /* Título e texto relacionado: 16px preserva a proximidade do grupo. */
     margin: 0 0 var(--space-4);
     color: var(--topic-color);
     font-size: 1.55rem;
     line-height: 1.2;
+}
+
+.topic-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* Espaçamento de 16px entre parágrafos: mantém o ritmo de leitura dentro de cada tema. */
