@@ -1,1 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Participante - Provas de Atletismo | IHC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <!-- HEADER-->
+  <header class="header">
+    <div class="container">
+      <div class="instituicao-badge">IFTM - Campus Uberlândia Centro | IHC</div>
+      <h1>Cadastro Oficial de Participantes</h1>
+      <p class="subtitulo">Preencha os dados do atleta para homologação nas provas oficiais de atletismo.</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <!-- FORMULÁRIO DE INSCRIÇÃO -->
+  <main class="container">
+    <form id="formAtletismo" class="form-card" novalidate>
+      
+      <!-- AVISO DE CAMPOS OBRIGATÓRIOS -->
+      <div class="alerta-obrigatorios">
+        <span class="asterisco">*</span> Campos com asterisco vermelho são de preenchimento obrigatório.
+      </div>
+
+      <!--============= SEÇÃO 1 =====================-->
+      <!-- SEÇÃO 1: DADOS PESSOAIS -->
+      <fieldset class="grupo-campos">
+        <legend class="grupo-titulo">1. Identificação do Atleta</legend>
+
+        <div class="linha-dupla">
+          <!-- Primeiro Nome em vez de apenas Nome -->
+          <div class="campo-item">
+            <label for="primeiroNome" class="rotulo">
+              Primeiro nome <span class="asterisco">*</span>
+              <span class="dica-formato">(Mín. 2 letras)</span>
+            </label>
+            <input type="text" id="primeiroNome" name="primeiroNome" class="input-padrao" placeholder="Ex: Lucas" required autocomplete="given-name">
+            <div id="erro-primeiroNome" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+
+          <div class="campo-item">
+            <label for="sobrenome" class="rotulo">
+              Sobrenome <span class="asterisco">*</span>
+              <span class="dica-formato">(Apenas letras)</span>
+            </label>
+            <input type="text" id="sobrenome" name="sobrenome" class="input-padrao" placeholder="Ex: Ferreira Silva" required autocomplete="family-name">
+            <div id="erro-sobrenome" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="linha-dupla">
+          <!-- Máscara e Formato da data -->
+          <div class="campo-item">
+            <label for="dataNascimento" class="rotulo">
+              Data de nascimento <span class="asterisco">*</span>
+              <span class="dica-formato">(dd/mm/aaaa)</span>
+            </label>
+            <input type="text" id="dataNascimento" name="dataNascimento" class="input-padrao" placeholder="Ex: 15/05/2000" maxlength="10" required>
+            <div id="erro-dataNascimento" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+
+          <!-- Não requerer dados calculáveis pelo sistema (Idade e Categoria) -->
+          <div class="campo-item">
+            <label for="idadeCalculada" class="rotulo">
+              Idade & Categoria
+              <span class="dica-formato">(Calculado automaticamente)</span>
+            </label>
+            <input type="text" id="idadeCalculada" class="input-padrao input-calculado" value="Aguardando data..." readonly aria-readonly="true">
+          </div>
+        </div>
+
+        <!-- 4 opções -> Botões de Rádio -->
+        <div class="campo-item">
+          <span class="rotulo">Sexo <span class="asterisco">*</span></span>
+          <div class="radio-grupo" role="radiogroup">
+            <label class="radio-item" for="sexo-masc">
+              <input type="radio" id="sexo-masc" name="sexo" value="Masculino">
+              <span>Masculino</span>
+            </label>
+            <label class="radio-item" for="sexo-fem">
+              <input type="radio" id="sexo-fem" name="sexo" value="Feminino">
+              <span>Feminino</span>
+            </label>
+            <label class="radio-item" for="sexo-outro">
+              <input type="radio" id="sexo-outro" name="sexo" value="Outro">
+              <span>Outro</span>
+            </label>
+            <label class="radio-item" for="sexo-nao">
+              <input type="radio" id="sexo-nao" name="sexo" value="Prefiro não informar">
+              <span>Prefiro não informar</span>
+            </label>
+          </div>
+          <div id="campo-sexo-outro" class="campo-condicional escondido">
+            <label for="sexoOutro" class="rotulo">Especifique como se identifica:</label>
+            <input type="text" id="sexoOutro" name="sexoOutro" class="input-padrao" placeholder="Digite sua identificação">
+          </div>
+          <div id="erro-sexo" class="mensagem-erro" aria-live="polite"></div>
+        </div>
+      </fieldset>
+
+      <!--============= SEÇÃO 2 =====================-->
+      <!-- SEÇÃO 2: MEDIDAS FÍSICAS (Coloquei IMC ficar mais completo) -->
+      <fieldset class="grupo-campos">
+        <legend class="grupo-titulo">2. Medidas Físicas do Atleta</legend>
+
+        <div class="linha-dupla">
+          <div class="campo-item">
+            <label for="peso" class="rotulo">
+              Peso <span class="dica-formato">(opcional)</span>
+            </label>
+            <div class="input-com-unidade">
+              <input type="text" id="peso" name="peso" class="input-padrao" placeholder="Ex: 72.5" maxlength="5">
+              <span class="unidade">kg</span>
+            </div>
+            <div id="erro-peso" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+
+          <div class="campo-item">
+            <label for="altura" class="rotulo">
+              Altura <span class="dica-formato">(opcional)</span>
+            </label>
+            <div class="input-com-unidade">
+              <input type="text" id="altura" name="altura" class="input-padrao" placeholder="Ex: 1.78" maxlength="5">
+              <span class="unidade">m</span>
+            </div>
+            <div id="erro-altura" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="info-adicional" id="boxImc">
+          Índice de Massa Corporal (IMC): <strong id="valorImc">--</strong> (<span id="textoImc">Informe peso e altura para calcular</span>)
+        </div>
+      </fieldset>
+
+      <!--============= SEÇÃO 3 =====================-->
+      <!-- SEÇÃO 3: ENDEREÇO E CONTATO (Preenchimento automático por CEP com js) -->
+      <fieldset class="grupo-campos">
+        <legend class="grupo-titulo">3. Endereço e Contato</legend>
+
+        <div class="linha-dupla">
+          <div class="campo-item">
+            <label for="cep" class="rotulo">
+              CEP <span class="dica-formato">(somente números)</span>
+            </label>
+            <input type="text" id="cep" name="cep" class="input-padrao" placeholder="00000-000" maxlength="9">
+            <span id="cep-status" class="status-ajuda"></span>
+            <div id="erro-cep" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+
+          <!-- Estado (UF) declarados, poderia colocar em arquivo separado -->
+          <div class="campo-item">
+            <label for="estado" class="rotulo">
+              Estado (UF) <span class="asterisco">*</span>
+            </label>
+            <select id="estado" name="estado" class="input-padrao" required>
+              <option value="">-- Selecione o Estado --</option>
+              <option value="AC">Acre (AC)</option>
+              <option value="AL">Alagoas (AL)</option>
+              <option value="AP">Amapá (AP)</option>
+              <option value="AM">Amazonas (AM)</option>
+              <option value="BA">Bahia (BA)</option>
+              <option value="CE">Ceará (CE)</option>
+              <option value="DF">Distrito Federal (DF)</option>
+              <option value="ES">Espírito Santo (ES)</option>
+              <option value="GO">Goiás (GO)</option>
+              <option value="MA">Maranhão (MA)</option>
+              <option value="MT">Mato Grosso (MT)</option>
+              <option value="MS">Mato Grosso do Sul (MS)</option>
+              <option value="MG">Minas Gerais (MG)</option>
+              <option value="PA">Pará (PA)</option>
+              <option value="PB">Paraíba (PB)</option>
+              <option value="PR">Paraná (PR)</option>
+              <option value="PE">Pernambuco (PE)</option>
+              <option value="PI">Piauí (PI)</option>
+              <option value="RJ">Rio de Janeiro (RJ)</option>
+              <option value="RN">Rio Grande do Norte (RN)</option>
+              <option value="RS">Rio Grande do Sul (RS)</option>
+              <option value="RO">Rondônia (RO)</option>
+              <option value="RR">Roraima (RR)</option>
+              <option value="SC">Santa Catarina (SC)</option>
+              <option value="SP">São Paulo (SP)</option>
+              <option value="SE">Sergipe (SE)</option>
+              <option value="TO">Tocantins (TO)</option>
+            </select>
+            <div id="erro-estado" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo-item">
+            <label for="cidade" class="rotulo">Cidade</label>
+            <input type="text" id="cidade" name="cidade" class="input-padrao" placeholder="Ex: Uberlândia">
+            <div id="erro-cidade" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+
+          <!-- Diretriz 10: Formato de Número de Telefone -->
+          <div class="campo-item">
+            <label for="celular" class="rotulo">
+              Celular <span class="dica-formato">((00) 90000-0000)</span>
+            </label>
+            <input type="tel" id="celular" name="celular" class="input-padrao" placeholder="(34) 99999-9999" maxlength="15">
+            <div id="erro-celular" class="mensagem-erro" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <!-- Diretriz 10: Formato de Número de Telefone esse é opcional -->
+        <div class="campo-item">
+          <label for="telefone" class="rotulo">
+            Telefone Fixo <span class="dica-formato">(opcional)</span>
+          </label>
+          <input type="tel" id="telefone" name="telefone" class="input-padrao" placeholder="(34) 3232-0000" maxlength="14">
+          <div id="erro-telefone" class="mensagem-erro" aria-live="polite"></div>
+        </div>
+      </fieldset>
+
+      <!--============= SEÇÃO 4 =====================-->
+      <!-- SEÇÃO 4: COMPETIÇÃO E PATROCÍNIO -->
+      <fieldset class="grupo-campos">
+        <legend class="grupo-titulo">4. Prova e Patrocínio</legend>
+
+        <div class="campo-item">
+          <label for="tipoProva" class="rotulo">
+            Que tipo de prova você vai competir? <span class="asterisco">*</span>
+          </label>
+
+          <!--AGRUPAMENTE DE POSSIVEIS MODALIDADES-->
+          <select id="tipoProva" name="tipoProva" class="input-padrao" required>
+            <option value="">-- Selecione a Modalidade --</option>
+            <optgroup label="Corridas de Velocidade">
+              <option value="100m rasos">100 metros rasos</option>
+              <option value="200m rasos">200 metros rasos</option>
+              <option value="400m rasos">400 metros rasos</option>
+            </optgroup>
+            <optgroup label="Meio-fundo e Fundo">
+              <option value="800m rasos">800 metros rasos</option>
+              <option value="1.500m">1.500 metros</option>
+              <option value="5.000m">5.000 metros</option>
+              <option value="10.000m">10.000 metros</option>
+            </optgroup>
+            <optgroup label="Saltos e Lançamentos">
+              <option value="Salto em distância">Salto em distância</option>
+              <option value="Salto em altura">Salto em altura</option>
+              <option value="Arremesso de peso">Arremesso de peso</option>
+              <option value="Lançamento de dardo">Lançamento de dardo</option>
+            </optgroup>
+            <optgroup label="Provas de Rua">
+              <option value="Maratona 42km">Maratona (42,195 km)</option>
+              <option value="Corrida 10km">Corrida de 10 km</option>
+            </optgroup>
+            <option value="Outro">Outra modalidade não listada</option>
+          </select>
+          <div id="erro-tipoProva" class="mensagem-erro" aria-live="polite"></div>
+
+          <div id="campo-prova-outro" class="campo-condicional escondido">
+            <label for="tipoProvaOutro" class="rotulo">Descreva a prova:</label>
+            <input type="text" id="tipoProvaOutro" name="tipoProvaOutro" class="input-padrao" placeholder="Ex: Salto triplo">
+          </div>
+        </div>
+
+        <div class="campo-item">
+          <span class="rotulo">Tem patrocinador? <span class="asterisco">*</span></span>
+          <div class="radio-grupo">
+            <label class="radio-item" for="patrocinio-sim">
+              <input type="radio" id="patrocinio-sim" name="possuiPatrocinador" value="sim">
+              <span>Sim, possuo patrocinador</span>
+            </label>
+            <label class="radio-item" for="patrocinio-nao">
+              <input type="radio" id="patrocinio-nao" name="possuiPatrocinador" value="nao">
+              <span>Não, atleta independente</span>
+            </label>
+          </div>
+          <div id="erro-possuiPatrocinador" class="mensagem-erro" aria-live="polite"></div>
+        </div>
+
+        <div class="campo-item">
+          <label for="nomePatrocinador" class="rotulo">
+            Nome do patrocinador:
+            <span id="dicaPatrocinador" class="dica-formato">(Habilitado se responder 'Sim' acima)</span>
+          </label>
+          <input type="text" id="nomePatrocinador" name="nomePatrocinador" class="input-padrao input-desabilitado" placeholder="Ex: Academia / Clube / Marca Esportiva" disabled>
+          <div id="erro-nomePatrocinador" class="mensagem-erro" aria-live="polite"></div>
+        </div>
+
+        <div class="campo-item">
+          <div class="rotulo-com-ajuda">
+            <label for="tenisCompeticao" class="rotulo">
+              Que tênis você vai utilizar no dia da competição?
+              <span class="dica-formato">(opcional)</span>
+            </label>
+            <button type="button" id="btnAjudaTenis" class="btn-ajuda" title="Clique para ver regras da World Athletics sobre calçados">
+              ❓ Dúvidas sobre o calçado?
+            </button>
+          </div>
+          <input type="text" id="tenisCompeticao" name="tenisCompeticao" class="input-padrao" placeholder="Ex: Sapatilha com pregos de pista 6mm ou tênis de amortecimento">
+        </div>
+      </fieldset>
+
+      <!--============= SEÇÃO DOS BOTOES =====================-->
+      <!-- BOTÕES DE AÇÃO -->
+      <div class="acoes-formulario">
+        <button type="button" id="btnLimpar" class="btn-secundario">
+          🗑️ Limpar Campos
+        </button>
+        <button type="submit" id="btnEnviar" class="btn-primario">
+          ✅ Finalizar Inscrição
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- MODAL DE CONFIRMAÇÃO -->
+  <div id="modalConfirmacao" class="modal-overlay escondido" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+    <div class="modal-box">
+      <h3 id="tituloModal">Confirmar Cadastro de Atleta</h3>
+      <p>Você revisou as informações digitadas e deseja realmente concluir a inscrição deste participante?</p>
+      <div class="modal-botoes">
+        <!-- O botão de negação -->
+        <button type="button" id="btnModalCancelar" class="btn-secundario">
+          Voltar e Revisar
+        </button>
+        <button type="button" id="btnModalConfirmar" class="btn-primario">
+          Sim, Confirmar Inscrição
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalSucesso" class="modal-overlay escondido" role="dialog" aria-modal="true" aria-labelledby="tituloSucesso">
+    <div class="modal-box">
+      <h3 id="tituloSucesso">✅ Inscrição confirmada!</h3>
+      <p id="mensagemSucesso" aria-live="polite"></p>
+      <div class="modal-botoes">
+        <button type="button" id="btnFecharSucesso" class="btn-primario">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE AJUDA: CALÇADOS -->
+  <div id="modalAjuda" class="modal-overlay escondido" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <h3>Regulamento de Calçados (World Athletics)</h3>
+      <p>Para sua segurança e homologação dos tempos nas provas de atletismo:</p>
+      <ul>
+        <li><strong>Provas de Pista:</strong> Permitidas sapatilhas com pregos de até 9mm (pista sintética) e solado de até 20mm a 25mm.</li>
+        <li><strong>Provas de Rua:</strong> Tênis com placa de carbono permitidos com espessura máxima de 40mm de entressola.</li>
+      </ul>
+      <button type="button" id="btnFecharAjuda" class="btn-primario">Entendi</button>
+    </div>
+  </div>
+
+  <!-- RODAPÉ SIMPLES -->
+  <footer class="footer">
+    © PRCSystems - Vanessa Pains Fonseca | IHC - 4º Período - Sistemas para Internet | IFTM Uberlândia Centro
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
