@@ -1,1 +1,373 @@
+/*  ==============================================================
+    ESTILOS CSS - PROJETO USABILIDADE EM ELEMENTOS DE FORMULÁRIO
+    Professor: Dr. Wilton de Paula Filho | IFTM Uberlândia Centro
+    ============================================================== */
+
+:root {
+  --cor-fundo: #f4f6f9;
+  --cor-card: #ffffff;
+  --cor-texto: #1f2937;
+  --cor-texto-suave: #4b5563;
+  --cor-primaria: #15803d; /* Verde institucional esportivo */
+  --cor-primaria-hover: #166534;
+  --cor-foco: #2563eb;    /* Azul para foco evidente */
+  --cor-obrigatorio: #dc2626; /* Vermelho para asteriscos e erros */
+  --cor-borda: #d1d5db;
+  --cor-desabilitado-bg: #f3f4f6; /* Cinza para inacessível */
+  --cor-desabilitado-txt: #9ca3af;
+  --fonte-principal: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* HEADER*/
+.header {
+  background: linear-gradient(to right, #14532d 0%, #22a447 50%, #14532d 100%);
+  color: #ffffff;
+  padding: 24px 0;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.instituicao-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.subtitulo {
+  font-size: 0.95rem;
+  color: #dcfce7;
+  margin-top: 4px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #334052;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+/* CARTÃO DO FORMULÁRIO */
+.form-card {
+  background-color: var(--cor-card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* IDENTIFICAÇÃO DE OBRIGATÓRIOS */
+.alerta-obrigatorios {
+  background-color: #fef2f2;
+  border-left: 4px solid var(--cor-obrigatorio);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #991b1b;
+  margin-bottom: 24px;
+}
+
+.asterisco {
+  color: var(--cor-obrigatorio);
+  font-weight: bold;
+}
+
+/* AGRUPAMENTOS POR FINALIDADE */
+.grupo-campos {
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  background-color: #fafafa;
+}
+
+.grupo-titulo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #15803d;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* LAYOUT RESPONSIVO (1 pergunta por linha no mobile) */
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .linha-dupla {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.campo-item {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RÓTULOS */
+.rotulo {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.dica-formato {
+  font-weight: normal;
+  color: var(--cor-texto-suave);
+  font-size: 0.85rem;
+}
+
+.rotulo-com-ajuda {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-ajuda {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ENTRADAS DE DADOS (INPUT, SELECT) */
+.input-padrao {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1.5px solid var(--cor-borda);
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--cor-texto);
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+/* CAMPO EM FOCO COM DESTAQUE NÍTIDO */
+.input-padrao:focus {
+  outline: none;
+  border-color: var(--cor-foco);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  background-color: #f8fafc;
+}
+
+/* CAMPO CALCULADO */
+.input-calculado {
+  background-color: #f1f5f9;
+  color: #334155;
+  cursor: not-allowed;
+  font-weight: 500;
+}
+
+/* CAMPOS DESABILITADOS (CINZA) */
+.input-desabilitado,
+.input-padrao:disabled {
+  background-color: var(--cor-desabilitado-bg) !important;
+  color: var(--cor-desabilitado-txt) !important;
+  border-color: #e5e7eb !important;
+  cursor: not-allowed;
+}
+
+/* UNIDADES DIMENSIONAIS NA INTERFACE */
+.input-com-unidade {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-com-unidade .input-padrao {
+  padding-right: 40px;
+}
+
+.unidade {
+  position: absolute;
+  right: 12px;
+  color: #6b7280;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* RÁDIOS */
+.radio-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+@media (min-width: 480px) {
+  .radio-grupo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.radio-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* MENSAGEM DE ERRO (REQUISITO: ERRO + SOLUÇÃO) */
+.mensagem-erro {
+  font-size: 0.85rem;
+  color: var(--cor-obrigatorio);
+  margin-top: 4px;
+  display: none;
+}
+
+.mensagem-erro.visivel {
+  display: block;
+}
+
+.input-invalido {
+  border-color: var(--cor-obrigatorio) !important;
+  background-color: #fef2f2 !important;
+}
+
+.info-adicional {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.campo-condicional {
+  margin-top: 10px;
+}
+
+.escondido {
+  display: none !important;
+}
+
+/* BOTÕES DE SUBMISSÃO E RESET */
+.acoes-formulario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+.btn-primario,
+.btn-secundario {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.btn-primario:active,
+.btn-secundario:active {
+  transform: scale(0.97); /* Feedback tátil de clique */
+}
+
+.btn-primario {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.btn-primario:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.btn-secundario {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secundario:hover {
+  background-color: #d1d5db;
+}
+
+/* MODAL DE CONFIRMAÇÃO */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.modal-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.modal-box p {
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.modal-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
 
