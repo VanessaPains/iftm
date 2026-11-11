@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação Heurística - IFTM Campus Uberlândia Centro | IHC</title>
+  <meta name="description" content="Formulário com perguntas e respostas sobre Avaliação Heurística de Usabilidade em HTML, CSS e JavaScript puro.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="instituicao-badge">IFTM - Campus Uberlândia Centro | IHC</div>
+      <h1 id="header-title">Avaliação Heurística – Perguntas e Respostas</h1>
+      <p id="header-sub" class="subtitulo">
+        Formulário acadêmico interativo com 9 questões fundamentais sobre usabilidade, etapas de inspeção e as 10 heurísticas de Nielsen & Molich.
+      </p>
+
+      <div class="header-tags">
+        <span class="tag-badge">Interação Humano-Computador</span>
+        <span class="tag-badge">9 Questões com Dicas & Gabarito</span>
+        <span class="tag-badge">Nielsen & Molich (1990/1994)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container">
+
+    <!-- CARD DE IDENTIFICAÇÃO DO PARTICIPANTE / AVALIADOR -->
+    <section class="card">
+      <div class="card-title-bar">
+        <h2>📋 Identificação do Aluno / Avaliador de Usabilidade</h2>
+        <span style="font-size: 0.75rem; color: #15803d; font-weight: 700;">💾 Salvo automaticamente no navegador</span>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="part-nome">Nome Compl. Aluno / Avaliador:</label>
+          <input type="text" id="part-nome" class="form-input" placeholder="Ex: Maria Oliveira">
+        </div>
+        <div class="form-group">
+          <label for="part-matricula">Matrícula / RA do Aluno:</label>
+          <input type="text" id="part-matricula" class="form-input" placeholder="Ex: 20261UDC0012">
+        </div>
+        <div class="form-group">
+          <label for="part-turma">Turma / Curso:</label>
+          <input type="text" id="part-turma" class="form-input" placeholder="Ex: IHC - Sistemas de Informação">
+        </div>
+        <div class="form-group">
+          <label for="part-data">Data da Avaliação:</label>
+          <input type="date" id="part-data" class="form-input">
+        </div>
+      </div>
+    </section>
+
+    <!-- BARRA DE FERRAMENTAS E AÇÕES -->
+    <section class="toolbar no-print">
+      <div class="search-box">
+        <input type="text" id="search-input" class="form-input" placeholder="🔍 Filtrar questões (ex: Nielsen, 5 avaliadores, etapas, 10 heurísticas)...">
+      </div>
+      <div class="actions-group">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="restartQuestionnaire()">🔄 Reiniciar Questionário e Cadastro</button>
+        <button type="button" onclick="window.print()" class="btn btn-primary btn-sm">🖨️ Imprimir / PDF</button>
+      </div>
+    </section>
+
+    <!-- LISTA DAS 9 QUESTÕES COM FORMULÁRIO E GABARITO -->
+    <section id="questions-list">
+      <!-- Inserido dinamicamente pelo script.js -->
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ INSTITUCIONAL -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="instituicao-badge" style="margin-bottom: 0.75rem;">IFTM - Campus Uberlândia Centro | IHC</div>
+          <p class="instituicao">Instituto Federal de Educação, Ciência e Tecnologia do Triângulo Mineiro</p>
+          <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.25rem;">
+            Campus Uberlândia Centro • Disciplina de Interação Humano-Computador (IHC)
+          </p>
+        </div>
+        <div>
+          <h4 style="color: #cbd5e1; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">Referência Metodológica</h4>
+          <p style="font-size: 0.75rem; color: #94a3b8; line-height: 1.5;">
+            Método de Avaliação Heurística de Usabilidade concebido por Jakob Nielsen e Rolf Molich (1990) e as 10 heurísticas clássicas (1994).
+          </p>
+        </div>
+      </div>
+      <p class="copyright">
+        © PRCSystems - Vanessa Pains Fonseca | IHC - 4º Período - Sistemas para Internet | IFTM Uberlândia Centro
+      </p>
+    </div>
+  </footer>
+
+  <div id="app-dialog" class="dialog-overlay" role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-message" hidden>
+    <section class="dialog-card">
+      <div class="dialog-icon" aria-hidden="true">ℹ️</div>
+      <h2 id="dialog-title" class="dialog-title"></h2>
+      <p id="dialog-message" class="dialog-message"></p>
+      <div class="dialog-actions">
+        <button id="dialog-cancel" type="button" class="btn btn-secondary" hidden>Cancelar</button>
+        <button id="dialog-confirm" type="button" class="btn btn-primary">Entendi</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
